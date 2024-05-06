@@ -2,13 +2,16 @@
 
 
 ##### Сервер на gin. В качестве БД - SQLite
+##### WeatherApp 
 ```go
 func SetupRouter() *gin.Engine {
 	router := gin.Default()
-
+	
 	router.GET("/:city", GetWeather)
 	router.GET("/", Start)
-
+	router.GET("/winterfell", EasterEgg)
+	router.GET("/Winterfell", EasterEgg)
+	
 	return router
 }
 ```
